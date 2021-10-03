@@ -1,0 +1,147 @@
+
+.top,.neck, .body, .bottom{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #ffffff;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+}
+.container_top{
+    display: flex;
+    gap: 5px;
+}
+.container_top > div{
+    width: 50%;
+    height: 15vh;
+    background-color: #5072A7;
+}
+.neck{
+
+background-color:#6CB4EE;
+width: 100%;
+height: 50vh;
+margin-top: 5px;
+
+}
+.body_part{
+    display: flex;
+    gap: 5px;
+}
+.body_part > div {
+    width: 50%;
+    height: 20vh;
+    background-color: #0070BB;
+    margin-top: 5px;
+}
+.container_bottom{
+    display: flex;
+    gap: 5px;
+}
+.container_bottom > div {
+    width: 50%;
+    height: 10vh;
+    background-color: #367588;
+    margin-top: 5px;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+#image_div{
+    width: 50%;
+    height: 50%;
+    background-color: transparent;
+}
+.container_overlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.container_overlay #sprite_img{
+    background: url(./img/spriteimage.svg) no-repeat -823px -22px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 40%;
+    cursor: pointer;
+}
+@media screen and (max-width:768px){
+   .container_top{
+       display: flex;
+       flex-direction: column;
+   }
+   
+    .container_top > div{
+    width: 100%;
+    transition: width 1s;
+    transition-timing-function: ease;
+    transform: rotate(180deg);
+   
+   }
+   .neck{
+       height: 50%;
+       transition: height 2s;
+       transition-timing-function: ease;
+   }
+   .body_part{
+    display: flex;
+   flex-direction: column;
+   }
+   .body_part > div{
+    width: 100%;
+    transition: width 1s;
+    transition-timing-function: ease;
+ }
+ .container_bottom{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container_bottom > div{
+    width: 49%;
+    transition: width 1s;
+    transition-timing-function: ease;
+   
+}
+
+}
+@media screen and (max-width:320px){
+    .container_top{
+        display: flex;
+        flex-direction: column;
+    }
+    
+     .container_top > div{
+        width: 100%;
+       transition: width 1s;
+       transition-timing-function: ease;
+       
+    }
+    .neck{
+        height: 25%;
+        transition: height 2s;
+        transition-timing-function: ease;
+    }
+    .body_part{
+        display: flex;
+        flex-direction: column;
+    }
+    .body_part > div{
+     width: 100%;
+     transition: width 1s;
+     transition-timing-function: ease;
+  }
+  .container_bottom{
+     display: flex;
+     flex-wrap: wrap;
+ }
+ .container_bottom > div{
+     width: 100%;
+     height: 50%;
+     transition: width 2s ,height 2s;
+     transition-timing-function: ease;
+     transform: rotate(180deg);
+
+ }
+ 
+ }
